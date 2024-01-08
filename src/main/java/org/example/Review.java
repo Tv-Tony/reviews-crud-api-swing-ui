@@ -6,7 +6,7 @@ public class Review {
     private String author;
     private String comment;
     private int score;
-    private OffsetDateTime date;
+    private String date;
 
     // Getters and setters
 
@@ -42,11 +42,11 @@ public class Review {
         this.score = score;
     }
 
-    public OffsetDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(OffsetDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }
