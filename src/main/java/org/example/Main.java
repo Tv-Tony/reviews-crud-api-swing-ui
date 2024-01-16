@@ -35,7 +35,7 @@ public class Main extends JFrame {
 
     public Main() {
         setContentPane(new JScrollPane(MainPanel));
-        setTitle("Simple Gui App");
+        setTitle("McDonalds Reviews");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(600, 600);
         setLocationRelativeTo(null);
@@ -139,7 +139,7 @@ public class Main extends JFrame {
                         updateReviewList();
                     }
                 } catch (NumberFormatException ex) {
-                    // Handle the case where ID or score is not a valid integer
+                    //ID or score is not a valid integer
                     idUpdateSearch.setText("Invalid ID or score");
                 }
             }
@@ -154,11 +154,10 @@ public class Main extends JFrame {
 
                     List<String> searchReviewList = reviewFunctions.listIDFromApi(idInt);
 
-                    // Check if the result contains an "Error"
+
                     if (searchReviewList.contains("Error")) {
                         idFindSearch.setText("Invalid ID");
                     } else {
-                        // Extract data from the list and update text fields
                         authorFind.setText(searchReviewList.get(0));
                         scoreFind.setText(searchReviewList.get(1));
                         reviewFind.setText(searchReviewList.get(2));
@@ -172,14 +171,14 @@ public class Main extends JFrame {
     }
 
     private void updateReviewList() {
-        // Fetch the latest reviews from your API or data source
+
         List<Review> reviewList = reviewFunctions.getReviews();
 
-        // Clear the existing items in the JList model
+
         DefaultListModel<Object> listModel = (DefaultListModel<Object>) reviews.getModel();
         listModel.clear();
 
-        // Add the reviews to the JList model with multiline rendering
+
         for (Review review : reviewList) {
             listModel.addElement("Review ID: " + review.getId());
             listModel.addElement("Author: " + review.getAuthor());

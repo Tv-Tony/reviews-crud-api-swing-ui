@@ -12,15 +12,15 @@ public class App
 {
     public static void main( String[] args ) {
 
-        ReviewFunctions reviewFunctions = new ReviewFunctions(review, retrofit, reviewsApi, call);
-
-        reviewFunctions.updateReview(1, "Tony V",  "Was Very Nice The Food", 5);
-
-        reviewFunctions.listIDFromApi(1);
-
-        reviewFunctions.averageScore();
-
-        reviewFunctions.listAll();
+//        ReviewFunctions reviewFunctions = new ReviewFunctions(review, retrofit, reviewsApi, call);
+//
+//        reviewFunctions.updateReview(1, "Tony V",  "Was Very Nice The Food", 5);
+//
+//        reviewFunctions.listIDFromApi(1);
+//
+//        reviewFunctions.averageScore();
+//
+//        reviewFunctions.listAll();
 
 
     }
