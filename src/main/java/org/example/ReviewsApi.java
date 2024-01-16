@@ -6,6 +6,7 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.PUT;
+import retrofit2.http.DELETE;
 public interface ReviewsApi {
     @GET("/api/review")
     Call<List<Review>> getReviews();
@@ -21,5 +22,11 @@ public interface ReviewsApi {
 
     @PUT("/api/review/{id}")
     Call<Void> updateReviewById(@Path("id") int id, @Body Review review);
+
+
+    @DELETE("/api/review/{id}")
+    Call<Void> deleteReviewById(@Path("id") int id);
+
+
 
 }
